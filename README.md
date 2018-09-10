@@ -22,3 +22,16 @@
 # Dtabase
 ## Install and create data base in mongo db
 ## Create data base using this command 'use databaseName'
+
+# To Run Project
+##
+## 1 Colne the project from github
+## 2 go in to  LoginApp folder and opne command prompt
+ ```npm install``` 
+## 3 run command 
+ ```ng serve```
+## 4 go in to server folder and open  command prompt and run command 
+ ```npm install```
+## 5 run command 
+```npm start```
+## 6 run mongodb
