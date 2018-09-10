@@ -1,0 +1,35 @@
+<div class="cintainer-fluid bg">
+    <div class="row">
+        
+      
+    <!-- login form start  -->
+        <div class="col-md-4 clo-sm-4 col-sx-12 col-sm-offset-4">
+                <!-- <img src="../../assets/img/download.png" class="img-circle img-responsive"  width='200px'height='150px' alt=""> -->
+            <form class="from-container" [formGroup]="userdata">
+                   
+                    <h1>Login From</h1>
+                <div class="form-group" >
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control"  placeholder="Enter password" formControlName="password">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-success btn-block" (click)="login()">Login</button>
+                <h5>
+                    <a class="">
+                        Forgot Password..
+                    </a>
+                </h5>
+                <button type="submit" class="btn btn-primary btn-block" (click)="goSignin()">SignIn</button>
+            </form>
+            <!-- end login form -->
+            
+        </div>
+    </div>
+</div>

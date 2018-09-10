@@ -1,0 +1,97 @@
+<div class="cintainer-fluid bg">
+    <div class="row">
+        <!-- login form start  -->
+        <div class="col-md-6 clo-sm-6 col-sx-12 col-sm-offset-3">
+            <form class="from-container" [formGroup]="userdata" (ngSubmit)=onsubmit()>
+                    <div  *ngIf = "addsucessfully" class = "alert alert-success"> 
+                            <h5><b>Register Successfully</b>  </h5> 
+                       </div>
+                <h1>Registration From</h1>
+                <br>
+                <!-- User Name field -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control"  formControlName="name">
+                </div>
+                <!-- User Name field  Validation-->
+                <div>
+                    <div *ngIf='userdata.controls["name"].hasError("required") ' class="text text-danger">
+                            Input Required
+                    </div>
+                    <div *ngIf='userdata.controls["name"].hasError("maxlength")' class="text text-danger">
+                        Enter Max 10 Character
+                    </div>
+                    <div *ngIf='userdata.controls["name"].hasError("minlength")' class="text text-danger">
+                        Enter Min 4 Character
+                    </div>
+                </div>
+                <!-- User date if birth field -->
+                <div class="form-group">
+                    <label for="dob">Date of birth:</label>
+                    <input type="date" class="form-control" (blur) = "datevalidation()" formControlName="dob">
+                </div>
+                <!-- User date of birth field Validation -->
+                <div>
+                    <div *ngIf='userdata.controls["dob"].hasError("required")' class="text text-danger">
+                         Input Required
+                    </div>
+                    <div *ngIf='dateinvalid' class="text text-danger">
+                            minimam Age Should be 18
+                       </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control"  formControlName="email">
+                </div>
+                <!-- User email field Validation -->
+                <div>
+                    <div *ngIf='userdata.controls["email"].hasError("required")' class="text text-danger">
+                            Input Required
+                    </div>
+                    <div *ngIf='userdata.controls["email"].hasError("pattern")' class="text text-danger">
+                            Enter Valid Email
+                    </div>
+                </div>
+                <!-- User phone number field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control"  formControlName="phone">
+                </div>
+                <!-- User phone number field Validation -->
+                <div>
+                        <div *ngIf= 'userdata.controls["phone"].hasError("required")' class="text text-danger">
+                                Enter Correct Mobile Number
+                        </div>
+                    <div *ngIf= 'userdata.controls["phone"].hasError("pattern")' class="text text-danger">
+                            Enter Correct Mobile Number
+                    </div>
+                </div>
+                <!-- User password field -->
+                <div class="form-group">
+                    <label for="password">password:</label>
+                    <input type="password" class="form-control"  formControlName="pass">
+                </div>
+                <!-- User passowrd field Validation -->
+                <div>
+                        <div *ngIf= 'userdata.controls["pass"].hasError("required")' class="text text-danger">
+                                Input Required
+                        </div>
+                        <div *ngIf= 'userdata.controls["pass"].hasError("minlength")' class="text text-danger">
+                                Enter minimam 8 Character
+                        </div>
+                        <div *ngIf= 'userdata.controls["pass"].hasError("maxlength")' class="text text-danger">
+                                Enter maximam 16 Character
+                        </div>
+                    </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" [disabled] = "!userdata.valid" class="btn btn-success btn-block">Submmit</button>
+            </form>
+            <!-- end login form -->
+            
+        </div>
+    </div>
+</div>
