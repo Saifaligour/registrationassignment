@@ -25,13 +25,13 @@
 
 # To Run Project
 ##
-## 1 Colne the project from github
-## 2 go in to  LoginApp folder and opne command prompt
+### 1 Colne the project from github
+### 2 go in to  LoginApp folder and opne command prompt and run command
  ```npm install``` 
-## 3 run command 
+### 3 run command 
  ```ng serve```
-## 4 go in to server folder and open  command prompt and run command 
+### 4 go in to server folder and open  command prompt and run command 
  ```npm install```
-## 5 run command 
+### 5 run command 
 ```npm start```
-## 6 run mongodb
+### 6 run mongodb
