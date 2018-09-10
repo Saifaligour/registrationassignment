@@ -24,7 +24,7 @@
 ## Create data base using this command 'use databaseName'
 
 # To Run Project
-##
+
 ### 1 Colne the project from github
 ### 2 go in to  LoginApp folder and opne command prompt and run command
  ```npm install``` 
